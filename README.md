@@ -23,6 +23,7 @@ pip install -r requirements.txt
 
 ### Platform notes
 - **macOS:** Grant accessibility permissions for both the terminal and the bundled app so PyAutoGUI can control the cursor. The required Quartz bridge (`pyobjc-framework-Quartz`) is listed in `requirements.txt`.
+- **macOS bundle:** The first time you open `AFK Mouse.app`, macOS will ask for *Input Monitoring* access so the F6 global hotkey can work. Approve the prompt or enable it under *System Settings → Privacy & Security → Input Monitoring*.
 - **Windows:** No extra system packages are required. If you bundle with PyInstaller, replace the icon path or use `--icon` with an `.ico` file.
 - **Linux (X11):** Ensure `python3-xlib` and an X11 session are available. On Wayland, global hotkeys may be blocked; the app falls back to GUI controls if the listener cannot start.
 
